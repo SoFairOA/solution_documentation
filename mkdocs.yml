@@ -1,5 +1,5 @@
-site_name: Documentation
-repo_url: 'https://github.com/SoFairOA/documentation'
+site_name: Solution Documentation
+repo_url: 'https://github.com/SoFairOA/solution_documentation'
 edit_uri_template: 'blob/main/docs/{path}'
 nav:
   - Home: index.md
