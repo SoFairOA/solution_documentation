@@ -3,20 +3,11 @@ repo_url: 'https://github.com/SoFairOA/documentation'
 edit_uri_template: 'blob/main/docs/{path}'
 nav:
   - Home: index.md
-  - 'Foreword': 01-foreword.md
-  - 'Introduction': 02-introduction.md
-  - 'Scope': 03-scope.md
-  - 'Workflow': 04-workflow.md
-  - 'Step 1: Sharing': 11-step-1.md
-  - 'Step 2: Deposit': 12-step-2.md
-  - 'Step 3: Extracted mention': 13-step-3.md
-  - 'Step 4: Notification': 14-step-4.md
-  - 'Step 5: Validation': 15-step-5.md
-  - 'Step 6: Saving': 16-step-6.md
-  - 'Step 7: Archiving': 17-step-7.md
-  - 'Step 8: Identification': 18-step-8.md
-  - 'Step 9: Metadata deposit metadata': 19-step-9.md
-  - 'Annex A: Bibliography': A-bibliography.md
+  - 'Website': 01-website.md
+  - 'Workflow': 02-workflow.md
+  - 'Dataset': 03-dataset.md
+  - 'Software Mention Extraction and Disambiguation': 04-software-mention-extraction-and-disambiguation.md
+  - 'Use Cases': 05-use-cases.md
 theme: readthedocs
 copyright: Copyright &copy; 2024-2025 SoFAIR Contributors.
 markdown_extensions:
