@@ -1,12 +1,9 @@
-# Managing the Lifecycle of Software Assets - A Workflow Guide for Developers
+# Welcome to the Sofair Solution Project Documentation
 
 Copyright © 2024-2025 SoFAIR Contributors.
 This work is licensed under the CC-BY-4.
 
-With thanks to David Pride, Hélène Jonin, Morane Gruenpeter, Petr Knoth, Matteo
-Cancellieri, Alain Monteil and the full SoFAIR project consortium for their
-contributions. This documentation instance was created in June 2024 to document
-the workflow for the software assets lifecycle management.
+This guide provides a high-level overview of the Sofair project and serves as your starting point for navigating its various components. Use this documentation as a central hub: it offers a broad understanding of how everything fits together and points you toward more detailed resources for specific parts of the system.
 
 !!! note "Intended audience"
     Members of the SoFAIR project and external contributors who wish to
