@@ -1,8 +1,6 @@
 # Software Mention Extraction and Disambiguation
 
-## High-level overview of the software mention extraction
-
-### Introduction
+## Introduction
 
 The system for software mention detection is built as a **cascade of models**, where each model builds on the output of the previous one to extract structured information from text. At a high level, the architecture begins with **sequence labelling models** that identify basic software-related spans in the text, followed by **specialised extractors** that assign deeper semantic roles or types to each identified mention.
 
@@ -11,7 +9,7 @@ Figure 1 illustrates this pipeline, where the first stage detects mentions of so
 ![figure1.png](img/figure1.png)
 ***Figure 1**: Software-mentions models cascade, with emphasis of the models software and softwareType that are the object of this document. In grey the models that are discussed in this deliverables.*
 
-#### Software-mentions workflow
+### Software-mentions workflow
 
 The first sequence labelling model is designed to identify **software-related entities** (Figure 2\)  in text. These include:
 
@@ -40,7 +38,7 @@ The system uses contextual cues and learned patterns to handle these cases, alth
 
 In the following section we present and discuss the results obtained by the experiments of training and evaluation of the machine learning models using different architecture and combination of data for training and evaluation. 
 
-#### Sequence labelling evaluation
+### Sequence labelling evaluation
 
 As discussed before, the machine learning models experimented with, are the “software” and “software type”.   
 To provide a better grasp of the respective size of each dataset or split, we provide as reference the number of occurrences of the most frequent label in the data. 
@@ -138,7 +136,7 @@ The results for the "software type" classification task show greater variation i
 
 **Table 8**: Evaluation scores of the **SoFAIR** “software type” model trained using the SoFAIR dataset, using the train/test splits described above
 
-#### End to end evaluation 
+### End to end evaluation 
 
 The model trained on SoftCite and SoFAIR data and evaluated on the SoMeSci ([https://arxiv.org/pdf/2108.09070](https://arxiv.org/pdf/2108.09070)) dataset. 
 
@@ -152,7 +150,7 @@ Due to limitations in the software entities that are considered in the SoMeSci d
 | version | 0.9196 | 0.7984 | 0.8548 | 129 |
 | **All (micro avg.)** | **0.7288** | **0.6366** | **0.6796** | **688** |
 
-#### Processing throughput evaluation
+### Processing throughput evaluation
 
 In this section we report the measured throughput of the service in terms of document per seconds, using the three different sources of input the data: PDF document, XML-TEI format, or plain text (TXT). The experiment was performed by processing 100 documents on a machine whose parameters are illustrated in Table 9\. 
 
