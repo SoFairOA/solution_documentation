@@ -128,12 +128,12 @@ The results for the "software type" classification task show greater variation i
 
 **Table 8**: Evaluation scores of the **Combined** “software type” model trained with SoftCite and SoFAIR dataset (train split) and evaluated with SoftCite and SoFAIR dataset (test split)
 
-| Label | Precision | Recall | F1-Score | Support |
-| ----- | ----- | ----- | ----- | ----- |
-| environment | 0.4314 | 0.4583 | 0.4444 | 48 |
-| component | 0.4364 | 0.4 | 0.4174 | 60 |
-| language | 0.6429 | 0.5 | 0.5625 | 18 |
-| implicit | 0.381 | 0.2254 | 0.2832 | 71 |
+| Label                | Precision  | Recall     | F1-Score | Support |
+|----------------------|------------|------------| ----- | ----- |
+| environment          | 0.4314     | 0.4583     | 0.4444 | 48 |
+| component            | 0.4364     | 0.4        | 0.4174 | 60 |
+| language             | 0.6429     | 0.5        | 0.5625 | 18 |
+| implicit             | 0.381      | 0.2254     | 0.2832 | 71 |
 | **All (micro avg.)** | **0.4383** | **0.3604** | **0.3955** | **197** |
 
 **Table 8**: Evaluation scores of the **SoFAIR** “software type” model trained using the SoFAIR dataset, using the train/test splits described above
@@ -144,13 +144,13 @@ The model trained on SoftCite and SoFAIR data and evaluated on the SoMeSci ([htt
 
 Due to limitations in the software entities that are considered in the SoMeSci dataset, the end to end evaluation focuses only on the four main labels: creator, software, url, version. 
 
-| Label | Precision | Recall | F1-Score | Support |
-| ----- | :---: | :---: | :---: | :---: |
-| creator | 0.9024 | 0.6667 | 0.7668 | 111 |
-| software | 0.6745 | 0.6123 | 0.6419 | 423 |
-| url | 0.1111 | 0.08 | 0.0930 | 25 |
-| version | 0.9196 | 0.7984 | 0.8548 | 129 |
-| **All (micro avg.)** | **0.7288** | **0.6366** | **0.6796** | **688** |
+| Label                | Precision  |  Recall    | F1-Score   | Support   |
+|----------------------|:----------:|:----------:|:----------:|:---------:|
+| creator              |   0.9024   |   0.6667   |   0.7668   |    111    |
+| software             |   0.6745   |   0.6123   |   0.6419   |    423    |
+| url                  |   0.1111   |    0.08    |   0.0930   |    25     |
+| version              |   0.9196   |   0.7984   |   0.8548   |    129    |
+| **All (micro avg.)** | **0.7288** | **0.6366** | **0.6796** |  **688**  |
 
 #### Processing throughput evaluation
 
@@ -160,21 +160,21 @@ The experiments were performed using several configurations:
 
 - **Concurrency**: the number of documents sent in parallel by the client, we tested with 8, 16, and 24 concurrent documents for the single service, and with 8, 16, 24, and 32 concurrent documents for the 2x service  
 - **Architecture**: the Deep Learning architecture used for the software model (the most heavily used model in the chain):   
-  - BERT: is the standard BERT (Bidirectional EncodeR for Text) with a standard activation layer  
-  - BERT\_CRF is the same architecture with a CRF activation layer, which offers better results at the price of a smaller throughput 
+    - BERT: is the standard BERT (Bidirectional EncodeR for Text) with a standard activation layer  
+    - BERT\_CRF is the same architecture with a CRF activation layer, which offers better results at the price of a smaller throughput 
 
 The experiment was performed using a single service or a cluster of two services coordinated with a load balancer. 
 
-| CPU model | Intel(R) Xeon(R) Silver 4214 CPU @ 2.20GHz |
-| :---- | :---- |
-| **CPU sockets** | 2 |
-| **CPU cores** | 24 |
-| **CPU threads** | 48 |
-| **CPU max MHz** | 3200.0000 |
-| **RAM \[GiB\]** | 187.6 |
-| **GPUs** | 2x NVIDIA GeForce RTX 2080 Ti |
-| **GPU memory \[MiB\]** | 2 x 11264 Mb |
-| **OS** | Ubuntu 20.04.6 LTS |
+| CPU model              | Intel(R) Xeon(R) Silver 4214 CPU @ 2.20GHz |
+|:-----------------------|:-------------------------------------------|
+| **CPU sockets**        | 2                                          |
+| **CPU cores**          | 24                                         |
+| **CPU threads**        | 48                                         |
+| **CPU max MHz**        | 3200.0000                                  |
+| **RAM \[GiB\]**        | 187.6                                      |
+| **GPUs**               | 2x NVIDIA GeForce RTX 2080 Ti              |
+| **GPU memory \[MiB\]** | 2 x 11264 Mb                               |
+| **OS**                 | Ubuntu 20.04.6 LTS                         |
 
 **Table 9**: Overview of the service on which SoftCite was deployed
 
@@ -186,21 +186,21 @@ From a throughput perspective, XML-TEI is consistently the most efficient format
 
 In terms of architecture, our results indicate that BERT consistently outperforms BERT+CRF in processing speed across all formats and configurations. The addition of a Conditional Random Field (CRF) layer introduces overhead due to the increased computational complexity in sequence decoding. While BERT+CRF may offer marginal gains in tagging accuracy for some tasks, the performance trade-off is significant, with throughput reductions ranging from 20% to over 40% depending on the input format and concurrency level. Therefore, for high-throughput or large-scale processing scenarios, vanilla BERT offers a more efficient and scalable solution.
 
-| Nodes | Conc | Architec | PDF |  | XML-TEI |  | TXT |  |
-| ----- | ----- | ----- | :---: | :---: | :---: | :---: | :---: | :---: |
-|  |  |  | doc/s | s | doc/s | s | doc/s | s |
-| **Single** | **8** | BERT | 0.28 | 352 | **0.59** | 169 | **0.38** | 261 |
-|  |  | BERT+CRF | 0.19 | 540 | 0.30 | 334 | 0.20 | 494 |
-|  | **16** | BERT | **0.30** | 338 | 0.58 | 171 | 0.37 | 267 |
-|  |  | BERT+CRF | 0.17 | 598 | 0.30 | 338 | 0.20 | 490 |
-|  | **24** | BERT | 0.29 | 342 | 0.63 | 160 | 0.36 | 277 |
-|  |  | BERT+CRF | 0.16 | 644 | 0.30 | 336 | 0.20 | 500 |
-| **Multi (2)** | **8** | BERT | 0.53 | 187 | 1.11 | 90 | 0.66 | 152 |
-|  |  | BERT+CRF | 0.41 | 243 | 0.55 | 182 | 0.37 | 270 |
-|  | **16** | BERT | **0.54** | 185 | **1.14** | 88 | **0.67** | 150 |
-|  |  | BERT+CRF | 0.39 | 256 | 0.54 | 185 | 0.38 | 266 |
-|  | **24** | BERT | 0.43 | 235 | 0.98 | 102 | 0.64 | 156 |
-|  |  | BERT+CRF | 0.33 | 306 | 0.55 | 182 | 0.32 | 314 |
+| Nodes         | Conc   | Architec   |  PDF     |     | XML-TEI   |     |  TXT     |     |
+|---------------|--------|------------|:--------:|:---:|:---------:|:---:|:--------:|:---:|
+|               |        |            |  doc/s   |  s  |   doc/s   |  s  |  doc/s   |  s  |
+| **Single**    | **8**  | BERT       |   0.28   | 352 | **0.59**  | 169 | **0.38** | 261 |
+|               |        | BERT+CRF   |   0.19   | 540 |   0.30    | 334 |   0.20   | 494 |
+|               | **16** | BERT       | **0.30** | 338 |   0.58    | 171 |   0.37   | 267 |
+|               |        | BERT+CRF   |   0.17   | 598 |   0.30    | 338 |   0.20   | 490 |
+|               | **24** | BERT       |   0.29   | 342 |   0.63    | 160 |   0.36   | 277 |
+|               |        | BERT+CRF   |   0.16   | 644 |   0.30    | 336 |   0.20   | 500 |
+| **Multi (2)** | **8**  | BERT       |   0.53   | 187 |   1.11    | 90  |   0.66   | 152 |
+|               |        | BERT+CRF   |   0.41   | 243 |   0.55    | 182 |   0.37   | 270 |
+|               | **16** | BERT       | **0.54** | 185 | **1.14**  | 88  | **0.67** | 150 |
+|               |        | BERT+CRF   |   0.39   | 256 |   0.54    | 185 |   0.38   | 266 |
+|               | **24** | BERT       |   0.43   | 235 |   0.98    | 102 |   0.64   | 156 |
+|               |        | BERT+CRF   |   0.33   | 306 |   0.55    | 182 |   0.32   | 314 |
 
 **Table 10**: Throughput results measured in document per seconds with several conditions: concurrency, architecture and number of nodes. The reported values represent the average of 3 runs.
 
@@ -212,11 +212,11 @@ To address this inefficiency, we developed a filtering model that identifies doc
 
 We trained a classification model, **ModernBERT-base**, on the combined SoFAIR, SoftCite, and SoMeSci datasets. The model distinguishes between documents with and without software mentions. Evaluation results are shown in the table below. In our benchmark, the model yielded a throughput of **39 documents per second** on a single **NVIDIA GeForce RTX 4090** GPU.
 
-| precision | 0.8625 |
-| :---: | :---- |
-| **recall** | 0.9104 |
-| **f1** | 0.8858 |
-| **accuracy** | 0.9268 |
+| precision    | 0.8625  |
+|:------------:|:--------|
+|  **recall**  | 0.9104  |
+|    **f1**    | 0.8858  |
+| **accuracy** | 0.9268  |
 
 **Table 11**: ModernBERT-base results on a test set from the collection of SoFAIR, SoftCite, and SoMeSci data.
 
