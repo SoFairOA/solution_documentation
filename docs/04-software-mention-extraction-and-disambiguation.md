@@ -9,6 +9,9 @@ Figure 1 illustrates this pipeline, where the first stage detects mentions of so
 ![figure1.png](img/figure1.png)
 ***Figure 1**: Software-mentions models cascade, with emphasis of the models software and softwareType that are the object of this document. In grey the models that are discussed in this deliverables.*
 
+### Download and usage
+Used models are publicly available on Huggingface: [https://huggingface.co/SoFairOA/software-mentions-models](https://huggingface.co/SoFairOA/software-mentions-models).
+
 ### Software-mentions workflow
 
 The first sequence labelling model is designed to identify **software-related entities** (Figure 2\)  in text. These include:
