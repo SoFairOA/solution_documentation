@@ -10,7 +10,9 @@ Figure 1 illustrates this pipeline, where the first stage detects mentions of so
 ***Figure 1**: Software-mentions models cascade, with emphasis of the models software and softwareType that are the object of this document. In grey the models that are discussed in this deliverables.*
 
 ### Download and usage
-Used models are publicly available on Huggingface: [https://huggingface.co/SoFairOA/software-mentions-models](https://huggingface.co/SoFairOA/software-mentions-models).
+The models described and evaluated in this project are publicly available on Huggingface: [https://huggingface.co/SoFairOA/software-mentions-models](https://huggingface.co/SoFairOA/software-mentions-models).
+The easiest and most efficient way to use those models, is through the software-mentions service, which is available as a [docker image](https://hub.docker.com/r/lfoppiano/software-mentions/tags) with tag `0.8.2-sofair` (TL;DR: `docker pull lfoppiano/software-mentions:0.8.2-sofair`).  
+The service can be deployed locally or on a server, and it exposes a REST API to process documents in several formats (PDF, XML-TEI, plain text). More information about the service and its deployment can be found in the [GitHub repository](https://github.com/softcite/software-mentions).
 
 ### Software-mentions workflow
 
