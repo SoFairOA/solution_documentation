@@ -1,5 +1,7 @@
 # Software Mention Extraction and Disambiguation
 
+Here we provide overview of the pipeline developed in the SoFAIR project. To get more information please refer to the dedicated documentation [New pipeline for software mention extraction, disambiguation and enrichment](https://sofair.org/wp-content/uploads/2025/10/D4.2.pdf).
+
 ## Introduction
 
 The system for software mention detection is built as a **cascade of models**, where each model builds on the output of the previous one to extract structured information from text. At a high level, the architecture begins with **sequence labelling models** that identify basic software-related spans in the text, followed by **specialised extractors** that assign deeper semantic roles or types to each identified mention.
