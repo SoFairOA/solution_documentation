@@ -1,11 +1,15 @@
 # Workflow
+| Resource Type | Link / Command |
+| :--- | :--- |
+| 📄 **Documentation** | [Workflow Documentation](https://sofairoa.github.io/documentation/) |
+
+The SoFAIR workflow (Figure 1) shows how stakeholders, tools and infrastructures work together. We provide brief description of each step and the resources available to perform it.
+
 
 ![The SoFAIR workflow](https://sofairoa.github.io/documentation/img/workflow.png)
 
 *Figure 1: The SoFAIR workflow*
 
-
-The SoFAIR workflow (Figure 1) shows how stakeholders, tools and infrastructures work together. We provide brief description of each step and the resources available to perform it.
 
 1. An author deposits a piece of research software in a code repository.
 2. The author then deposits a manuscript that contains either explicit or implicit mentions of that software.
@@ -31,6 +35,4 @@ The SoFAIR workflow (Figure 1) shows how stakeholders, tools and infrastructures
 8. Software Heritage issues a permanent identifier for the new asset and sends this back to the repository.
 
 
-For the full details on the workflow and the interactions between the various infrastructure component please follow the Workflow documentation at the link below:
-
-[Workflow Documentation](https://sofairoa.github.io/documentation/)
+For the full details on the workflow and the interactions between the various infrastructure component please follow the Workflow documentation at the link in the table above.
