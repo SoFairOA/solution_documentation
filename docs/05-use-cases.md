@@ -1,4 +1,13 @@
 # Use Cases
+
+| Resource Type | Link |
+| :--- | :--- |
+| 📄 **Documentation** | [Starting environment for human
+annotation of software mentions](https://sofair.org/wp-content/uploads/2024/04/D4.1-Starting-environment-for-human-annotation-of-software-mentions.pdf) |
+| 📄 **Dataset** | [Dataset](https://github.com/SoFairOA/Dataset) |
+| 📄 **Paper** | [Paper](https://doi.org/10.21954/ou.rd.30374830) |
+
+
 We made two demonstrators and one case study that focuses on the evaluation and deployment of the tools and workflows developed by the SoFAIR project. 
 
 To get more details, please check the dedicated [Evaluation Report](https://sofair.org/wp-content/uploads/2025/11/D5.2_review.pdf).

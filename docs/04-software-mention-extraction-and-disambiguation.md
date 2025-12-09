@@ -1,5 +1,13 @@
 # Software Mention Extraction and Disambiguation
 
+| Resource Type | Link / Command |
+| :--- | :--- |
+| 📄 **Documentation** | [New pipeline for software mention extraction...](https://sofair.org/wp-content/uploads/2025/10/D4.2.pdf) |
+| 🤗 **Models** | [HuggingFace Collection](https://huggingface.co/SoFairOA/software-mentions-models) |
+| 🐳 **Docker Image** | `docker pull lfoppiano/software-mentions:0.8.2-sofair` |
+| 💻 **Service Code** | [GitHub: softcite/software-mentions](https://github.com/softcite/software-mentions) |
+| 💻 **Filter Tool** | [GitHub: SoFairOA/filter](https://github.com/SoFairOA/filter) |
+
 Here we provide overview of the pipeline developed in the SoFAIR project. To get more information please refer to the dedicated documentation [New pipeline for software mention extraction, disambiguation and enrichment](https://sofair.org/wp-content/uploads/2025/10/D4.2.pdf).
 
 ## Introduction
