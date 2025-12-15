@@ -26,9 +26,9 @@ We worked on the following use cases:
 
 <b>Case study in the digital humanities</b>
 
-| Resource Type | Link                                                                                                     |
-|:--------------|:---------------------------------------------------------------------------------------------------------|
-| 💾 **Data**   | [Used data](https://sofair.org/wp-content/uploads/2025/12/data_case_study_in_the_digital_humanities.zip) |
+| Resource Type  | Link                                                                                                   |
+|:---------------|:-------------------------------------------------------------------------------------------------------|
+| 💾 **Dataset** | [dataset](https://sofair.org/wp-content/uploads/2025/12/data_case_study_in_the_digital_humanities.zip) |
 
 * <b>Aim:</b> To investigate the potential of automated software-mention detection for analyzing digital transformation processes in the humanities by examining software-usage in publications.
 * <b>Outcome:</b> The study found that automated detection is valuable for scientometric and infrastructural applications. A high proportion of DH journal publications contained software mentions (30-60%), while Traditional Linguistics and Literary Studies (TLL) journals rarely exceeded 10-15%.
