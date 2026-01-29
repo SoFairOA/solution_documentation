@@ -2,7 +2,7 @@
 
 | Resource Type | Link |
 | :--- | :--- |
-| 📄 **Evaluation Report** | [https://sofair.org/wp-content/uploads/2025/11/D5.2_review.pdf](https://sofair.org/wp-content/uploads/2025/11/D5.2_review.pdf) |
+| 📄 **Evaluation Report** | [https://sofair.org/wp-content/uploads/2026/01/D5.2.pdf](https://sofair.org/wp-content/uploads/2026/01/D5.2.pdf) |
 
 
 
